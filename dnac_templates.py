@@ -45,7 +45,7 @@ else:
         name_key=[(template['name'])]
         if name_key == arguments:
             templateid=(template['templateId'])
-            print('template name: {name}\ntemplateid: {tid}'.format(name=template["name"],tid=template['templateId']))
+            print('\nTemplate Name: {name}\nTemplate Id: {tid}'.format(name=template["name"],tid=template['templateId']))
             print('\n*Required Parameters for this template\n')
             for data in get_template(templateid)['templateParams']:
                 isRequired=(data['required'])
