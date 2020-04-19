@@ -1,0 +1,73 @@
+Hostname:border01.d3mtl.local
+Serial#:FCW2204G0YL
+IP Address:10.31.40.21
+Type:C9300-48U
+Software:16.12.3
+
+Hostname:border02.d3mtl.local
+Serial#:FCW2205L025
+IP Address:10.31.40.22
+Type:C9300-48U
+Software:16.12.3
+
+Hostname:d3Labsw01-3850.d3mtl.local
+Serial#:FOC1737U0K0
+IP Address:10.3.100.254
+Type:WS-C3850-24PW-E
+Software:16.8.1a
+
+Hostname:d3mtlwifi01.d3mtl.local
+Serial#:9ET28FCHWEX
+IP Address:10.3.24.112
+Type:C9800-CL-K9
+Software:17.2.1
+
+Hostname:d3vicaplab9120-1
+Serial#:0
+IP Address:10.3.47.101
+Type:C9120AXI-Z
+Software:17.2.1.11
+
+Hostname:d3viclab4800-1
+Serial#:FGL2315A019
+IP Address:10.31.46.2
+Type:AIR-AP4800-Z-K9
+Software:17.2.1.11
+
+Hostname:edge01.d3mtl.local
+Serial#:FCW2205L14M
+IP Address:10.31.40.164
+Type:C9300-48U
+Software:16.12.3
+
+Hostname:edge02.d3mtl.local
+Serial#:FCW2204L0Y3
+IP Address:10.31.40.165
+Type:C9300-48U
+Software:16.12.3
+
+Hostname:Lab-Vic-Sensor-01
+Serial#:KWC2141069X
+IP Address:10.31.41.3
+Type:AIR-AP1800S-Z-K9
+Software:1.3.3.0
+
+Hostname:Lab-Vic-Sensor-02
+Serial#:KWC21410674
+IP Address:10.31.41.2
+Type:AIR-AP1800S-Z-K9
+Software:1.3.3.0
+
+Hostname:SN-FDO2138U0D6.d3mtl.local
+Serial#:FDO2138U0D6
+IP Address:10.31.46.65
+Type:IE-4000-8GS4G-E
+Software:15.2(7b)E0b
+
+Total C9300-48U : 4
+Total WS-C3850-24PW-E : 1
+Total C9800-CL-K9 : 1
+Total C9120AXI-Z : 1
+Total AIR-AP4800-Z-K9 : 1
+Total AIR-AP1800S-Z-K9 : 2
+Total IE-4000-8GS4G-E : 1

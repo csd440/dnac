@@ -4,20 +4,11 @@ import sys
 import logging
 from argparse import ArgumentParser
 import csv
-import requests
-import json
 from requests.auth import HTTPBasicAuth
 from dnac_config import *
-import urllib3
 
 template_url="https://10.3.24.230/dna/intent/api/v1/template-programmer/template"
-urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
-
-def get_token():
-    url="https://10.3.24.230/dna/system/api/v1/auth/token"
-    response=requests.post(url,auth=(USERNAME, PASSWORD),verify=False)
-    token=response.json()['Token']
-    return token
+headers={"X-Auth-Token": "{}".format(Token),"Content-type": "application/json"}
 
 def list_templates():
     url=template_url
@@ -32,12 +23,10 @@ def get_template(tid):
     template_data=response.json()
     return template_data
 
-Token=get_token()
-headers={"X-Auth-Token": "{}".format(Token),"Content-type": "application/json"}
-
 _,*args=sys.argv
 arguments=args
 if arguments == []:
+    print("\n##### List of Available Templates #####\n")
     for template in list_templates():
         print("{name}".format(name=template["name"],project=template["projectName"]))
 else:
@@ -45,7 +34,7 @@ else:
         name_key=[(template['name'])]
         if name_key == arguments:
             templateid=(template['templateId'])
-            print('\nTemplate Name: {name}\nTemplate Id: {tid}'.format(name=template["name"],tid=template['templateId']))
+            print('\n\nProject Name: {projectName}\nTemplate Name: {name}\nTemplate Id: {tid}'.format(name=template["name"],tid=template['templateId'],projectName=template['projectName']))
             print('\n*Required Parameters for this template\n')
             for data in get_template(templateid)['templateParams']:
                 isRequired=(data['required'])
