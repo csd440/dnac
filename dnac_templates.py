@@ -30,16 +30,18 @@ if arguments == []:
     for template in list_templates():
         print("{name}".format(name=template["name"],project=template["projectName"]))
 else:
+    parameterList=[]
     for template in list_templates():
         name_key=[(template['name'])]
         if name_key == arguments:
             templateid=(template['templateId'])
             print('\n\nProject Name: {projectName}\nTemplate Name: {name}\nTemplate Id: {tid}'.format(name=template["name"],tid=template['templateId'],projectName=template['projectName']))
-            print('\n*Required Parameters for this template\n')
+            stemplate=get_template(templateid)
+            print('\n###Start of Template###\n{content}'.format(content=stemplate['templateContent']))
+            print('####End of Template####')
             for data in get_template(templateid)['templateParams']:
                 isRequired=(data['required'])
                 if isRequired == True:
-                    print('*{0}'.format(data['parameterName']))
-                else:
-                    print('{0}'.format(data['parameterName']))
+                    parameterList.append(data['parameterName']+':')
+            print('Required Parameters:',parameterList)
 
