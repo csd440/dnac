@@ -1,3 +1,12 @@
+'''
+Script Name: dnac_devices.py
+Author: Chris Day
+Description: Get a list of devices to provide the information that is important to the customer.
+List the number of device types and quantity of each device type on the network
+Change History:
+Version, Author, Date, Comments
+0.1, chris day, 20.04.2020, initial script
+'''
 from dnac_config import *
 from collections import Counter
 import sys
